@@ -5,7 +5,19 @@
   <meta http-equiv="Expires" content="-1">
 
   <script src="https://unpkg.com/kvdb.io@v1.0"></script>
-  <script>
+  
+ </head>
+
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
+<p>Test5.</p>
+<img id="gridimage" src="" />
+
+<script>
+
+   var im = document.getElementById('gridimage');
+   im.src = 'https://res.cloudinary.com/dwqordpbo/image/upload/GridImage.png?q=' + Date.now(); 
 
    const myapp = async () => {
     const bucket = KVdb.bucket('KCh5qaBiSsfxZXLeM8hC23');
@@ -13,19 +25,19 @@
     document.body.innerHTML = '<div>resp ' + res  + '</div>';
    }
 
-//   myapp();
+   // myapp();
 
-//setInterval(myTimer, 2000);
-//myTimer();
+   //setInterval(myTimer, 2000);
+   //myTimer();
 
-setTimeout(function () { location.reload(1); }, 5000);
+   setTimeout(function () { location.reload(1); }, 602000);
+   setInterval(function () { 
+   //var image = document.createElement('img');
+   var image = document.getElementById('gridimage');
+   image.src = 'https://res.cloudinary.com/dwqordpbo/image/upload/GridImage.png?q=' + Date.now(); 
+   //imageParent.appendChild(image);
+   }, 10000);
 
-  </script>
- </head>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p>Test4.</p>
-<img src="https://res.cloudinary.com/dwqordpbo/image/upload/GridImage.png" />
+</script>
 </body>
 </html>
